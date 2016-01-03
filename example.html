@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Maskker by m1sta</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+</head>
+
+<body>
+    <h3>Demo</h3>
+    <div id="example">
+        <script src="maskker.min.js"></script>
+        <span id="maskker"><span style="color:blue; cursor: pointer;">Demo: Click or tap here and select two images</span></span>
+        <br>
+        <br>
+        <div id="hashes"></div>
+        <script>
+            maskker.register({
+                selector:'#maskker',
+                onProgress: function (progress) { document.getElementById("hashes").innerText = "Processing: " + progress },
+                onComplete: function (user, pass, name) { 
+                    document.getElementById("hashes").innerHTML =  "User: " + user + "<br>Pass: " + pass + "<br>Name: " + name}
+            })
+        </script>
+    </div>
+
+</body>
+
+</html>
