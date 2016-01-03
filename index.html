@@ -32,11 +32,10 @@
             that looks like 'fn&71!dnkjsd'.</p>
 
         <h3>Demo</h3>
-        <span id="example">
+        <div id="example">
             <script src="maskker.min.js"></script>
-            <span id="maskker" style="color:blue">Demo: Click or tap here and select two images</span>
-            <br><br>
-            <div id="hashes"></div>
+            <span id="maskker"><span style="color:blue; cursor: pointer;">Demo: Click or tap here and select two images</span></span>
+            <br><br><div id="hashes"></div>
             <script>
                 maskker.register({
                 selector:'#maskker',
@@ -45,10 +44,10 @@
                     document.getElementById("hashes").innerHTML =  "User: " + user + "<br>Pass: " + pass + "<br>Name: " + name}
             })
             </script>
-            </span>
+        </div>
         <h3>Usage</h3>
-        <p> Just include maskker.min.js on your page and then use the maskker.register() function. Masker will output
-            three things: a username, a password, and a friendly name.
+        <p> Just include maskker.min.js on your page and then use the maskker.register() function. Masker will output three things:
+            a username, a password, and a friendly name.
         </p>
         <p>The friendly name is provided as an indicator to let users know they provided the correct to images. It's provided
             to prevent them needing to input a name that's really not important most of the time. View the source of this
